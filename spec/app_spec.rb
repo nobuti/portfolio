@@ -19,7 +19,7 @@ describe "Portfolio" do
   end
 
   it "should have contact link" do
-    last_response.body.should match(/<a class="link" href="mailto: buti@nobuti.com" titile="hire me">Let's talk<\/a>/)
+    last_response.body.should match(/<a class="link" href="mailto: buti@nobuti.com" title="hire me">Let's talk<\/a>/)
   end
 
 end
