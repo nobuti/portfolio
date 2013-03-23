@@ -1,30 +1,20 @@
 source :rubygems
 
-ruby '1.9.3'
-
-gem 'rake'
-gem 'sinatra', '1.3.3'
-gem 'sprockets', '~> 2.0'
-gem 'thin'
+gem 'sinatra'
 gem 'slim'
-gem 'sass'
-gem 'coffee-script'
-gem 'yui-compressor'
+gem 'thin'
 gem 'net-ssh'
-gem "therubyracer", :require => 'v8'
-
-group :development, :test do
-  gem 'sinatra-reloader'
-  gem 'guard'
-  gem "guard-livereload"
-  gem "rack-livereload"
-end
 
 group :development do
-  gem 'rb-fsevent', :require => false
-end
-
-group :test do
-  gem 'rspec'
-  gem 'rack-test', :require => "rack/test"
+  gem 'rack-livereload'
+  gem 'guard-livereload'
+  gem 'rake-pipeline'
+  gem 'rake-pipeline-web-filters'
+  gem 'coffee-script'
+  gem 'yui-compressor'
+  gem 'uglifier'
+  gem 'sass'
+  gem 'compass'
+  gem 'rb-fsevent', '~> 0.9'
+  gem "therubyracer", :require => 'v8'
 end

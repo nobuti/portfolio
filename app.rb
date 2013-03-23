@@ -1,40 +1,31 @@
-require 'sinatra/base'
+require 'bundler'
+Bundler.require
 
-if development?
-  require 'sinatra/reloader'
-  require 'rack-livereload'
+module AssetHelpers
+  def css_path(source)
+    "/stylesheets/#{source}"
+  end
+  def js_path(source)
+    "/javascripts/#{source}"
+  end
+  def image_path(source)
+    "/images/#{source}"
+  end
 end
 
 class App < Sinatra::Base
 
-  configure do
-    set :start_time, Time.now
-  end
-
   configure :development do
-    register Sinatra::Reloader
+    require 'rake-pipeline'
+    require 'rake-pipeline/middleware'
+    use Rake::Pipeline::Middleware, 'Assetfile'
+    require 'rack-livereload'
     use Rack::LiveReload
   end
 
-  configure :production do
-    before do
-      last_modified settings.start_time
-      etag settings.start_time.to_s
-      cache_control :public, :must_revalidate, :max_age => 60
-    end
-  end
-
   helpers do
-    def script_tag(file_name)
-      path_prefix = '/assets/'
-      %(<script src="#{path_prefix}#{file_name}.js"></script>)
-    end
-     
-    def stylesheet_tag(file_name)
-      path_prefix = '/assets/'
-      %(<link rel="stylesheet" href="#{path_prefix}#{file_name}.css">)
-    end
-  end 
+    include AssetHelpers
+  end
 
   get "/" do
     slim :home
