@@ -2,6 +2,7 @@
 # Used by rsync when deploying code to the server
 .excludes
 .sass-cache
+.bundle
 .git
 .gitignore
 log/
