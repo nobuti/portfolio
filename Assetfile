@@ -28,10 +28,6 @@ end
 output "public/javascripts"
 
 input "assets/javascripts" do
-  # convert coffeescript
-  match "**/*.coffee" do
-    coffee_script
-  end
 
   # concat and minify javascript
   match "*.js" do

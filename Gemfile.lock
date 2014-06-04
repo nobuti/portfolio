@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     POpen4 (0.1.4)
       Platform (>= 0.4.0)
@@ -7,10 +7,6 @@ GEM
     Platform (0.4.0)
     chunky_png (1.2.7)
     coderay (1.0.9)
-    coffee-script (2.2.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.6.2)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -35,7 +31,6 @@ GEM
       multi_json (~> 1.0)
     http_parser.rb (0.5.3)
     json (1.7.7)
-    libv8 (3.11.8.13)
     listen (0.7.3)
     lumberjack (1.0.3)
     method_source (0.8.1)
@@ -59,8 +54,6 @@ GEM
     rake-pipeline-web-filters (0.7.0)
       rack
       rake-pipeline (~> 0.6)
-    rb-fsevent (0.9.3)
-    ref (1.0.2)
     sass (3.2.7)
     sinatra (1.4.2)
       rack (~> 1.5, >= 1.5.2)
@@ -72,9 +65,6 @@ GEM
     slop (3.4.4)
     temple (0.5.5)
     terminal-table (1.4.5)
-    therubyracer (0.11.3)
-      libv8 (~> 3.11.8.12)
-      ref
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -91,18 +81,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-script
   compass
   guard-livereload
   net-ssh
   rack-livereload
   rake-pipeline
   rake-pipeline-web-filters
-  rb-fsevent (~> 0.9)
-  sass
   sinatra
   slim
-  therubyracer
   thin
   uglifier
   yui-compressor
