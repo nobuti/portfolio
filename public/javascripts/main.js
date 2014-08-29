@@ -8,7 +8,8 @@
     function Binder() {
       this.normalize = __bind(this.normalize, this);
       this.trigger = __bind(this.trigger, this);
-      this.on = __bind(this.on, this);      this.handlers = {};
+      this.on = __bind(this.on, this);
+      this.handlers = {};
     }
 
     Binder.prototype.on = function(elem, event, fn) {
@@ -30,7 +31,6 @@
 
     Binder.prototype.off = function(elem, event, fn) {
       var i, index, _fn, _i, _len, _ref;
-
       if (this.handlers[event][elem]) {
         index = -1;
         _ref = this.handlers[event][elem];
@@ -49,7 +49,6 @@
 
     Binder.prototype.trigger = function(event) {
       var e, fn, target, type, _i, _len, _ref, _results;
-
       e = event || window.event;
       target = e.target ? e.target : e.srcElement;
       type = e.type;
