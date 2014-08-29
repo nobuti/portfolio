@@ -8,6 +8,7 @@ gem 'thin'
 gem 'net-ssh'
 
 group :development do
+  gem 'rb-fsevent', '~> 0.9'
   gem 'rack-livereload'
   gem 'guard-livereload'
   gem 'rake-pipeline'
@@ -15,4 +16,5 @@ group :development do
   gem 'yui-compressor'
   gem 'uglifier'
   gem 'compass'
+  gem 'foreman'
 end
