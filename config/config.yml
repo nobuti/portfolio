@@ -1,0 +1,8 @@
+# Server options:
+address: 127.0.0.1
+port: 11058
+ 
+# Adapter options:
+environment: production
+ 
+# See `thin -h` for more options
