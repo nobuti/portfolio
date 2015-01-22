@@ -47,7 +47,7 @@ class Binder
 phrases = [
   "I make html and css sites.",
   "I'm in love with javascript.",
-  "I like coffescript flavour.",
+  "I like vanilla javascript flavour.",
   "I prefer SASS over LESS.",
   "I think testing is important.",
   "I play with Node.js for fun.",
