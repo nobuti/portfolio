@@ -23,6 +23,11 @@ task :setup => :environment do
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/log"]
 end
 
+desc 'Compile assets'
+task :build_assets => :environment do
+  queue %[cd #{deploy_to}/#{current_path} && bundle exec rakep build]
+end
+
 desc "Deploys the current version to the server."
 task :deploy => :environment do
   deploy do
@@ -31,6 +36,7 @@ task :deploy => :environment do
     invoke :'bundle:install'
 
     to :launch do
+      invoke :'build_assets'
       queue "mkdir -p #{deploy_to}/#{current_path}/tmp/"
       queue "touch #{deploy_to}/#{current_path}/tmp/restart.txt"
     end
