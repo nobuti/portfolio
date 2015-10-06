@@ -1,3 +1,3 @@
 # nobuti.com
 ============
-Portfolio at nobuti.com made with Sinatra, Sass and Coffeescript. All together cooking with Sublime Text.
+Portfolio at nobuti.com made with Sinatra, Sass and love. All together cooking with Sublime Text.
