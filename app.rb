@@ -28,14 +28,14 @@ class App < Sinatra::Base
   end
 
   get "/" do
-    slim :home
+    erb :home
   end
 
   get "/resume" do
-    slim :resume
+    erb :resume
   end
 
   not_found do
-    slim :not_found
+    erb :not_found
   end
 end

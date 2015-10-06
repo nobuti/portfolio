@@ -3,7 +3,7 @@ ruby '2.1.5'
 source 'https://rubygems.org'
 
 gem 'sinatra'
-gem 'slim'
+gem 'erubis'
 gem 'thin'
 gem 'net-ssh'
 

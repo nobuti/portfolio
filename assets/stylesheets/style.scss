@@ -2,8 +2,8 @@
 @import 'grid/grid';
 @import 'normalize';
 
-$font-family: "proxima-nova",sans-serif;
-$font-weight-black: 900;
+$font-family: "Montserrat", Helvetica, sans-serif;
+$font-weight-black: 700;
 $font-weight-normal: 400;
 $bgc: #C7240A;
 $color: white;
@@ -44,9 +44,11 @@ $columns: 12;
     color: #231E1E;
   }
 }
+
 body {
   font-family: $font-family;
   font-style: normal;
+  font-size: 14px;
   background-color: $bgc;
   color: $color;
 }
@@ -64,14 +66,14 @@ body {
 
 h1 {
   font-size: 4em;
-  @media screen and (max-width : 320px) {
+  @media screen and (max-width : 400px) {
     font-size: 2.5em;
   }
 }
 h2 {
   font-size: 2em;
   font-weight: $font-weight-normal;
-  @media screen and (max-width : 320px) {
+  @media screen and (max-width : 400px) {
     font-size: 1.5em;
   }
 }
@@ -86,12 +88,12 @@ a {
   @include user-select(none);
   cursor: pointer;
   margin: 0 5px;
-  
-  @media screen and (max-width : 320px) {
+
+  @media screen and (max-width : 400px) {
     background: #231E1E url("../images/refresh.png") 98% no-repeat;
     padding: 0 30px 0 5px;
   }
-  @media screen and (min-width: 321px) {
+  @media screen and (min-width: 401px) {
     background: #231E1E url("../images/refresh-big.png") 98% no-repeat;
     padding: 0 50px 0 5px;
   }
@@ -103,7 +105,7 @@ span.divider {
   margin: 40px 0;
   &.mini {
     width: 15px;
-    margin: 20px 0;  
+    margin: 20px 0;
   }
 }
 
@@ -127,7 +129,7 @@ span.divider {
   @include one-column;
 }
 .me {
-  hrgroup {
+  hgroup {
     @include column(4);
     @include one-column-inner;
     h1, h2 {
