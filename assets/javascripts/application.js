@@ -1,0 +1,1 @@
+require('./components/foo').init();

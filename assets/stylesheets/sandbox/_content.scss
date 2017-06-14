@@ -1,0 +1,29 @@
+.Content {
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  width: 80%;
+}
+
+h1, h2, p {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 4rem;
+
+  @media only screen and (min-width: 800px) {
+    font-size: 3vw;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    font-size: 5rem;
+  }
+}
+
+a {
+  color: #F92116;
+  word-break: break-all;
+}
+
+.u-Block {
+  display: block;
+}
