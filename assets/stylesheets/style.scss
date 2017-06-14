@@ -90,11 +90,11 @@ a {
   margin: 0 5px;
 
   @media screen and (max-width : 400px) {
-    background: #231E1E url("../images/refresh.png") 98% no-repeat;
+    // background: #231E1E url("../images/refresh.png") 98% no-repeat;
     padding: 0 30px 0 5px;
   }
   @media screen and (min-width: 401px) {
-    background: #231E1E url("../images/refresh-big.png") 98% no-repeat;
+    // background: #231E1E url("../images/refresh-big.png") 98% no-repeat;
     padding: 0 50px 0 5px;
   }
 }
